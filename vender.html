@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+<br/>
+<br/>
+    <title>vender</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/logo-nav.css" rel="stylesheet">
+	<?PHP
+
+$username = $_POST['username'];
+print ($username);
+
+?>
+
+  </head>
+   <body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">Pulguilla Express</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="index.html">Login
+                <span class="sr-only">(current)</span>
+              </a>
+			  <li class="nav-item">
+              <a class="nav-link" href="Item1.html">Crear Cuenta</a>
+            </li>
+			  <li class="nav-item">
+              <a class="nav-link" href="index.html">Comprar</a>
+            </li>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="vender.html">Vender</a>
+            </li>
+            <!-- <li class="nav-item">
+              <a class="nav-link" href="#"></a>
+            </li>-->
+            <li class="nav-item">
+              <a class="nav-link" href="#">Contacto</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+	 	<br/>
+	<main>
+
+
+
+		 <p>Click para distancia.</p>
+<button onclick="getLocation()">PIN Distancia</button>
+
+
+<p id="demo"></p>
+
+    <?php
+	<div class="container">
+	<form method="post" action="galaxys6.html">
+ Nombre del Articulo: <input type="text" name="name" placeholder="Ej. Iphone X"size="50" /><br />
+ Direccion: <input type="text" name="adress" placeholder="Direccion completa"size="50"  /><br />
+ Fotos: <input type="file" name="photo"  /><br />
+
+ Precio$<input type="number" min="2.00" max="1000000000.00" step="2.00" placeholder="2.00 minimo" /><br/>
+ Peso(Libras)<input type="number" min="0.00" max="1000000000.00" step="0.01" placeholder="0.01" /><br/>
+
+ lunes<input type="checkbox" name="lunes" value="l">
+  martes<input type="checkbox" name="martes" value="m">
+   miercoles<input type="checkbox" name="miercoles" value="w">
+    jueves<input type="checkbox" name="jueves" value="j">
+	 viernes<input type="checkbox" name="viernes" value="v">
+	  sabado<input type="checkbox" name="sabado" value="d">
+	   domingo<input type="checkbox" name="domingo" value="l"><br />
+ Horario disponible desde:
+  <input type="time" name="usr_time"> hasta <input type="time" name="usr_time"><br />   
+ Description: <input type="text" name="Description" placeholder="Descripcion del producto completa"size="80"  /><br />
+<input type="submit" value="Submit" name="submit" />
+</form>
+
+?>
+
+<script>
+var x = document.getElementById("demo");
+
+function getLocation() {
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(showPosition, showError);
+  } else { 
+    x.innerHTML = "Geolocation is not supported by this browser.";
+  }
+}
+
+function showPosition(position) {
+  x.innerHTML = "Latitude: " + position.coords.latitude + 
+  "<br>Longitude: " + position.coords.longitude;
+}
+
+function showError(error) {
+  switch(error.code) {
+    case error.PERMISSION_DENIED:
+      x.innerHTML = "User denied the request for Geolocation."
+      break;
+    case error.POSITION_UNAVAILABLE:
+      x.innerHTML = "Location information is unavailable."
+      break;
+    case error.TIMEOUT:
+      x.innerHTML = "The request to get user location timed out."
+      break;
+    case error.UNKNOWN_ERROR:
+      x.innerHTML = "An unknown error occurred."
+      break;
+  }
+}
+</script>
+</div>
+ </main>
+
+    <!-- /.container -->
+  <!-- Footer -->
+    <footer class="py-5 bg-dark">
+      <div class="container">
+        <p class="m-0 text-center text-white">Copyright &copy; Pulguilla Express 2018</p>
+      </div>
+      <!-- /.container -->
+    </footer>
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+	
+ </body>
+ 
+</html>
